@@ -12,23 +12,18 @@ My pipeline consisted of 5 steps. First, I converted the images to grayscale, th
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by calculating slopes of lines which were detected by Hough Transform function and judging the slopes of lines are postive or negative. If they are postive, then the lines are on the right lanes, vice versa. I realized that when there was no any right lines or left lines detected. And in this case, errors will come out, since some x array are null. So I chose to filter x arrays which are null. I also found that some lines (slopes are between 0 to 0.3, 0.8 to 1) were detected. In this case, when I use np.polyfit to fit all points, the slope of the line I got has a big difference from the real lane. So I chose to filter the lines which have slopes are between 0 to 0.3, 0.8 to 1.
 
 
-[1]![whiteCarLaneSwitch](/test_images_output/whiteCarLaneSwitch.jpg)
-"whiteCarLaneSwitch"
+[1]"whiteCarLaneSwitch"![whiteCarLaneSwitch](/test_images_output/whiteCarLaneSwitch.jpg)
 
-[2]![solidYellowCurve](test_images_output/solidYellowCurve.jpg)
-"solidYellowCurve"
+[2]"solidYellowCurve"![solidYellowCurve](test_images_output/solidYellowCurve.jpg)
 
-[3]![solidWhiteCurve](test_images_output/solidWhiteCurve.jpg)
-"solidWhiteCurve"
+[3]"solidWhiteCurve"![solidWhiteCurve](test_images_output/solidWhiteCurve.jpg)
 
-[4]![solidWhiteRight](test_images_output/solidWhiteRight.jpg)
-"solidWhiteRight"
+[4]"solidWhiteRight"![solidWhiteRight](test_images_output/solidWhiteRight.jpg)
 
-[5][solidYellowLeft](test_images_output/solidYellowLeft.jpg)
-"solidYellowLeft"
+[5]"solidYellowLeft"![solidYellowLeft](test_images_output/solidYellowLeft.jpg)
 
-[6][solidYellowCurve2](test_images_output/solidYellowCurve2.jpg)
-"solidYellowCurve2"
+[6]"solidYellowCurve2"![solidYellowCurve2](test_images_output/solidYellowCurve2.jpg)
+
 
 ### 2. Identify potential shortcomings with your current pipeline
 
